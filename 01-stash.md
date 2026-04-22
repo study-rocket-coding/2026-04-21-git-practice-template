@@ -4,6 +4,13 @@
 
 ### 前置步驟：讓 branch 產生差異
 
+> **為什麼需要這個步驟？**  
+> Git 切換 branch 時，只有在「切過去會蓋掉你目前的修改」時才會擋住你。  
+> 因為 `feature-your-name` 是從 `main` 開出來的，兩個 branch 的 `index.html` 內容完全一樣，  
+> 所以就算你修改了但沒 commit，Git 切過去也不會有衝突，就直接讓你切了。  
+> 我們需要先在 `feature-your-name` 上 commit 一個修改，讓它跟 `main` 不同，  
+> 之後再修改同一個地方，Git 才會真的擋住你。
+
 確認你在 `feature-your-name` branch 上，先在 `src/index.html` 加入以下內容並 commit：
 
 ```html
