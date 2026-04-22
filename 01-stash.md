@@ -2,8 +2,31 @@
 
 ## 🎬 情境描述
 
-你正在 `feature-your-name` branch 上開發一個新功能，  
-已經修改了 `src/index.html`，但**還沒有 commit**。
+### 前置步驟：讓 branch 產生差異
+
+確認你在 `feature-your-name` branch 上，先在 `src/index.html` 加入以下內容並 commit：
+
+```html
+<section class="hero">
+  <p>這是一個用來練習 Git 指令的示範頁面。</p>
+  <p>版本：v1.0</p>
+</section>
+```
+
+```bash
+git add src/index.html
+git commit -m "feat: add version label to hero section"
+```
+
+---
+
+### 正式情境開始
+
+現在繼續修改 `src/index.html`，把版本號改成 `v2.0`，但**先不要 commit**：
+
+```html
+<p>版本：v2.0</p>
+```
 
 這時候，協作者說：
 
